@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Multiple of 3 & 5</title>
 </head>
 <body>
-    <input type="text" placeholder="Type Here:" id="myInput">
-    <button type="button" onclick="getInputValue()">Get Result</button>
-    <p>And the Answer is: </p>
-    <p id="answer"></p>
-    <script>
-        function getInputValue() {
-        let input = document.getElementById("myInput").value;
-        let sum = 0,
-        i = 3;
-        while (i < input) {
-            if (i % 3 == 0 || i % 5 == 0) sum += i;
-            i++;
+    <p id="description">Put number in form below and 
+        the sum of all the multiples of 3 and 5 will 
+        be returned of the given number.</p>
+    <div class="container">
+        <input type="text" placeholder="Type Here:" id="myInput">
+        <button type="button" onclick="getInputValue()">Get Result</button>
+        <p>And the Answer is: </p>
+        <p id="answer"></p>
+        <script>
+            function getInputValue() {
+            let input = document.getElementById("myInput").value;
+            let sum = 0,
+            i = 3;
+            while (i < input) {
+                if (i % 3 == 0 || i % 5 == 0) sum += i;
+                i++;
+            }
+            document.getElementById("answer").innerHTML = sum;
         }
-        document.getElementById("answer").innerHTML = sum;
-    }
-    </script>
+        </script>
+    </div>
 </body>
 </html>
